@@ -1,0 +1,9 @@
+using UnityEngine;
+
+namespace Gisha.SmarterTogether
+{
+    public class #SCRIPTNAME#
+    {
+        #NOTRIM#
+    }
+}
