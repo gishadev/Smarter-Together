@@ -2,6 +2,7 @@
 
 namespace Gisha.SmarterTogether.Drone
 {
+    [RequireComponent(typeof(DroneRaycaster))]
     public class DroneController : MonoBehaviour
     {
         [Header("Drone")]
@@ -12,6 +13,8 @@ namespace Gisha.SmarterTogether.Drone
         [Header("Camera")]
         [SerializeField] private Camera droneCamera = default;
         [SerializeField] private float mouseSensitivity = default;
+
+        public Camera DroneCamera => droneCamera;
 
         float _xRot, _yRot;
         float _zInput, _xInput, _yInput;
@@ -68,7 +71,7 @@ namespace Gisha.SmarterTogether.Drone
             _xRot = Mathf.Clamp(_xRot, -90f, 90f);
 
             _yRot += mouseX;
-            droneCamera.transform.rotation = Quaternion.Euler(Vector3.right * _xRot + Vector3.up * _yRot);
+            DroneCamera.transform.rotation = Quaternion.Euler(Vector3.right * _xRot + Vector3.up * _yRot);
         }
 
         private void OnDrawGizmos()
@@ -77,7 +80,7 @@ namespace Gisha.SmarterTogether.Drone
             Gizmos.DrawRay(transform.position, transform.forward * 5f);
 
             Gizmos.color = Color.blue;
-            Gizmos.DrawRay(droneCamera.transform.position, droneCamera.transform.forward * 5f);
+            Gizmos.DrawRay(DroneCamera.transform.position, DroneCamera.transform.forward * 5f);
         }
     }
 }
