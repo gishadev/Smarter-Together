@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   robotCamera: {fileID: 1746164023}
   mouseSensitivity: 75
-  moveSpeed: 4
+  moveSpeed: 6
   jumpForce: 10
   gravityMult: 3
   airMovementMult: 0.35
