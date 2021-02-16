@@ -11,18 +11,19 @@ namespace Gisha.SmarterTogether.Body.Drone
         [SerializeField] private float turnRealignForce = default;
 
         [Header("Camera")]
+        [SerializeField] private Camera droneCamera = default;
         [SerializeField] private float mouseSensitivity = default;
 
-        public Camera DroneCamera { private set; get; }
+        public Camera DroneCamera => droneCamera;
 
         float _xRot, _yRot;
         float _zInput, _xInput, _yInput;
 
         Rigidbody _rb;
 
+
         private void Awake()
         {
-            DroneCamera = GetComponentInChildren<Camera>();
             _rb = GetComponent<Rigidbody>();
 
             Cursor.lockState = CursorLockMode.Locked;
@@ -30,11 +31,17 @@ namespace Gisha.SmarterTogether.Body.Drone
 
         private void Update()
         {
+            if (!IsWorking)
+                return;
+
             UpdateMovementInput();
         }
 
         private void FixedUpdate()
         {
+            if (!IsWorking)
+                return;
+            
             CameraRotate();
             DroneMove();
             DroneRotate();
@@ -81,6 +88,9 @@ namespace Gisha.SmarterTogether.Body.Drone
 
         private void OnDrawGizmos()
         {
+            if (!Application.isPlaying)
+                return;
+
             Gizmos.color = Color.red;
             Gizmos.DrawRay(transform.position, transform.forward * 5f);
 

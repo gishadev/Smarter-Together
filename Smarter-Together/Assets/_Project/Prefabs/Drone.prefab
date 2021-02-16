@@ -178,7 +178,7 @@ Rigidbody:
   m_GameObject: {fileID: 638097425733500107}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 1
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -213,6 +213,7 @@ MonoBehaviour:
   moveForce: 100
   turnFollowForce: 3
   turnRealignForce: 12
+  droneCamera: {fileID: 963194227}
   mouseSensitivity: 75
 --- !u!114 &3638813250833420408
 MonoBehaviour:

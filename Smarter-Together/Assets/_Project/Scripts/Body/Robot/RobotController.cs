@@ -5,11 +5,14 @@ namespace Gisha.SmarterTogether.Body.Robot
 {
     public class RobotController : BodyPlaceholder, IRaycastTarget
     {
-        public Camera RobotCamera { private set; get; }
+        [SerializeField] private Camera robotCamera = default;
 
-        private void Awake()
+        public Camera RobotCamera => robotCamera;
+
+        private void Update()
         {
-            RobotCamera = GetComponentInChildren<Camera>();
+            if (!IsWorking)
+                return;
         }
 
         public void OnRaycast()
