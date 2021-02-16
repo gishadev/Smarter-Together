@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d25474361c2cd48b473d7c4de9cf6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 100
+  moveForce: 150
   turnFollowForce: 3
   turnRealignForce: 12
   droneCamera: {fileID: 963194227}
