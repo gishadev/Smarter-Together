@@ -24,8 +24,8 @@ namespace Gisha.SmarterTogether.Body
 
             UpdateCurrentBody(_droneController);
 
-            _droneController.DroneCamera.gameObject.SetActive(true);
-            _currentRobot.RobotCamera.gameObject.SetActive(false);
+            _droneController.Camera.gameObject.SetActive(true);
+            _currentRobot.Camera.gameObject.SetActive(false);
         }
 
         public static void ChangeToRobot(RobotController robot)
@@ -34,8 +34,8 @@ namespace Gisha.SmarterTogether.Body
             UpdateCurrentBody(robot);
 
             // Update State.
-            _droneController.DroneCamera.gameObject.SetActive(false);
-            robot.RobotCamera.gameObject.SetActive(true);
+            _droneController.Camera.gameObject.SetActive(false);
+            robot.Camera.gameObject.SetActive(true);
         }
 
         private static void UpdateCurrentBody(BodyPlaceholder newBody)

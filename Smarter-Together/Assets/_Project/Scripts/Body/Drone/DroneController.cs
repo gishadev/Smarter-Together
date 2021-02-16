@@ -14,7 +14,7 @@ namespace Gisha.SmarterTogether.Body.Drone
         [SerializeField] private Camera droneCamera = default;
         [SerializeField] private float mouseSensitivity = default;
 
-        public Camera DroneCamera => droneCamera;
+        public Camera Camera => droneCamera;
 
         float _xRot, _yRot;
         float _zInput, _xInput, _yInput;
@@ -42,9 +42,9 @@ namespace Gisha.SmarterTogether.Body.Drone
             if (!IsWorking)
                 return;
             
-            CameraRotate();
-            DroneMove();
-            DroneRotate();
+            RotateCamera();
+            MoveBody();
+            RotateBody();
         }
 
         private void UpdateMovementInput()
@@ -59,7 +59,7 @@ namespace Gisha.SmarterTogether.Body.Drone
             else
                 _yInput = 0f;
         }
-        private void CameraRotate()
+        private void RotateCamera()
         {
             var mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.fixedDeltaTime;
             var mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.fixedDeltaTime;
@@ -68,15 +68,15 @@ namespace Gisha.SmarterTogether.Body.Drone
             _xRot = Mathf.Clamp(_xRot, -90f, 90f);
 
             _yRot += mouseX;
-            DroneCamera.transform.rotation = Quaternion.Euler(Vector3.right * _xRot + Vector3.up * _yRot);
+            Camera.transform.rotation = Quaternion.Euler(Vector3.right * _xRot + Vector3.up * _yRot);
         }
-        private void DroneMove()
+        private void MoveBody()
         {
             var vel = transform.right * _xInput + transform.forward * _zInput;
             vel.y = _yInput;
             _rb.velocity = vel * moveForce * Time.fixedDeltaTime;
         }
-        private void DroneRotate()
+        private void RotateBody()
         {
             var droneRotationTarget = Quaternion.Euler(Vector3.up * _yRot);
 
@@ -95,7 +95,7 @@ namespace Gisha.SmarterTogether.Body.Drone
             Gizmos.DrawRay(transform.position, transform.forward * 5f);
 
             Gizmos.color = Color.blue;
-            Gizmos.DrawRay(DroneCamera.transform.position, DroneCamera.transform.forward * 5f);
+            Gizmos.DrawRay(Camera.transform.position, Camera.transform.forward * 5f);
         }
     }
 }

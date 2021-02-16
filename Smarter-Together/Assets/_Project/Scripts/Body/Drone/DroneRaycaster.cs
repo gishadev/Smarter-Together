@@ -14,7 +14,7 @@ namespace Gisha.SmarterTogether.Body.Drone
 
         private void Update()
         {
-            var raycastHits = Physics.RaycastAll(transform.position, drone.DroneCamera.transform.forward);
+            var raycastHits = Physics.RaycastAll(transform.position, drone.Camera.transform.forward);
             var targetRaycastHits = raycastHits.Where(x => x.collider.CompareTag("RaycastTarget")).ToArray();
 
             if (targetRaycastHits.Length > 0)
