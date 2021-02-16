@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-namespace Gisha.SmarterTogether.Drone
+namespace Gisha.SmarterTogether.Body.Drone
 {
     [RequireComponent(typeof(DroneRaycaster))]
-    public class DroneController : MonoBehaviour
+    public class DroneController : BodyPlaceholder
     {
         [Header("Drone")]
         [SerializeField] private float moveForce = default;
@@ -11,10 +11,9 @@ namespace Gisha.SmarterTogether.Drone
         [SerializeField] private float turnRealignForce = default;
 
         [Header("Camera")]
-        [SerializeField] private Camera droneCamera = default;
         [SerializeField] private float mouseSensitivity = default;
 
-        public Camera DroneCamera => droneCamera;
+        public Camera DroneCamera { private set; get; }
 
         float _xRot, _yRot;
         float _zInput, _xInput, _yInput;
@@ -23,6 +22,7 @@ namespace Gisha.SmarterTogether.Drone
 
         private void Awake()
         {
+            DroneCamera = GetComponentInChildren<Camera>();
             _rb = GetComponent<Rigidbody>();
 
             Cursor.lockState = CursorLockMode.Locked;
@@ -35,18 +35,9 @@ namespace Gisha.SmarterTogether.Drone
 
         private void FixedUpdate()
         {
-            RotateCamera();
-
-            var vel = transform.right * _xInput + transform.forward * _zInput;
-            vel.y = _yInput;
-            _rb.velocity = vel * moveForce * Time.fixedDeltaTime;
-
-            var droneRotationTarget = Quaternion.Euler(Vector3.up * _yRot);
-
-            if (Mathf.Abs(_rb.rotation.x) > 0 || Mathf.Abs(_rb.rotation.z) > 0)
-                _rb.rotation = Quaternion.Slerp(_rb.rotation, droneRotationTarget, turnRealignForce * Time.fixedDeltaTime);
-            else
-                _rb.rotation = Quaternion.Slerp(_rb.rotation, droneRotationTarget, turnFollowForce * Time.fixedDeltaTime);
+            CameraRotate();
+            DroneMove();
+            DroneRotate();
         }
 
         private void UpdateMovementInput()
@@ -61,8 +52,7 @@ namespace Gisha.SmarterTogether.Drone
             else
                 _yInput = 0f;
         }
-
-        private void RotateCamera()
+        private void CameraRotate()
         {
             var mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.fixedDeltaTime;
             var mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.fixedDeltaTime;
@@ -72,6 +62,21 @@ namespace Gisha.SmarterTogether.Drone
 
             _yRot += mouseX;
             DroneCamera.transform.rotation = Quaternion.Euler(Vector3.right * _xRot + Vector3.up * _yRot);
+        }
+        private void DroneMove()
+        {
+            var vel = transform.right * _xInput + transform.forward * _zInput;
+            vel.y = _yInput;
+            _rb.velocity = vel * moveForce * Time.fixedDeltaTime;
+        }
+        private void DroneRotate()
+        {
+            var droneRotationTarget = Quaternion.Euler(Vector3.up * _yRot);
+
+            if (Mathf.Abs(_rb.rotation.x) > 0 || Mathf.Abs(_rb.rotation.z) > 0)
+                _rb.rotation = Quaternion.Slerp(_rb.rotation, droneRotationTarget, turnRealignForce * Time.fixedDeltaTime);
+            else
+                _rb.rotation = Quaternion.Slerp(_rb.rotation, droneRotationTarget, turnFollowForce * Time.fixedDeltaTime);
         }
 
         private void OnDrawGizmos()

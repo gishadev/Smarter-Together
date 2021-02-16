@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5827924939739070037}
   - component: {fileID: 5827924939739070034}
   - component: {fileID: 5827924939739070035}
-  - component: {fileID: 1080136587}
+  - component: {fileID: 5827924938126922011}
   m_Layer: 0
   m_Name: Robot
   m_TagString: RaycastTarget
@@ -180,7 +180,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1080136587
+--- !u!114 &5827924938126922011
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,7 +189,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5827924939739070032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d48e9d54a61cb3f42a4c48d6f1414e0f, type: 3}
+  m_Script: {fileID: 11500000, guid: 195e1b63286ca4f46bec9e662f508d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 1746164023}

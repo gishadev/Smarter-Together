@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 963194226}
   m_Layer: 0
   m_Name: Drone Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +213,6 @@ MonoBehaviour:
   moveForce: 100
   turnFollowForce: 3
   turnRealignForce: 12
-  droneCamera: {fileID: 963194227}
   mouseSensitivity: 75
 --- !u!114 &3638813250833420408
 MonoBehaviour:

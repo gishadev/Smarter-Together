@@ -2294,14 +2294,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 963194225, guid: b940367fbb8ad5f4ea315d2ba08c0363, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 963194225, guid: b940367fbb8ad5f4ea315d2ba08c0363, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 638097425733500107, guid: b940367fbb8ad5f4ea315d2ba08c0363, type: 3}
       propertyPath: m_Name
       value: Drone

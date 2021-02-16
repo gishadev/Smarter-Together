@@ -1,7 +1,8 @@
-﻿using System.Linq;
+﻿using Gisha.SmarterTogether.Core;
+using System.Linq;
 using UnityEngine;
 
-namespace Gisha.SmarterTogether.Drone
+namespace Gisha.SmarterTogether.Body.Drone
 {
     public class DroneRaycaster : MonoBehaviour
     {
@@ -18,7 +19,7 @@ namespace Gisha.SmarterTogether.Drone
 
             if (targetRaycastHits.Length > 0)
             {
-                var raycastTarget = targetRaycastHits.FirstOrDefault().collider.GetComponent<RaycastTarget>();
+                var raycastTarget = targetRaycastHits.FirstOrDefault().collider.GetComponent<IRaycastTarget>();
                 raycastTarget.OnRaycast();
             }
         }
