@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using UnityEngine;
 
 namespace Gisha.SmarterTogether.Core
@@ -6,7 +7,9 @@ namespace Gisha.SmarterTogether.Core
     public class ActivationButton : MonoBehaviour
     {
         [SerializeField] private float sqrDistForActivation = default;
+        [SerializeField] private Door[] doors = default;
 
+        public event Action<bool> Triggered;
 
         bool _isTriggering = false;
         Transform[] robots;
@@ -16,6 +19,22 @@ namespace Gisha.SmarterTogether.Core
             robots = GameObject.FindGameObjectsWithTag("Robot")
                 .Select(x => x.transform)
                 .ToArray();
+        }
+
+        private void OnEnable()
+        {
+            foreach (var door in doors)
+            {
+                Triggered += door.Trigger;
+            }
+        }
+
+        private void OnDisable()
+        {
+            foreach (var door in doors)
+            {
+                Triggered -= door.Trigger;
+            }
         }
 
         private void Update()
@@ -45,14 +64,20 @@ namespace Gisha.SmarterTogether.Core
             }
         }
 
+        [ContextMenu("Activate")]
         private void OnEnterArea()
         {
             Debug.Log("<color=green>Button was activated!</color>");
+
+            Triggered(true);
         }
 
+        [ContextMenu("Deactivate")]
         private void OnExitArea()
         {
             Debug.Log("<color=red>Button was deactivated</color>");
+
+            Triggered(false);
         }
 
         private void OnDrawGizmos()

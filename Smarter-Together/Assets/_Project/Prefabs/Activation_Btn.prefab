@@ -95,3 +95,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sqrDistForActivation: 2.5
+  doors:
+  - {fileID: 0}
