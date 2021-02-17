@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 5827924938126922011}
   m_Layer: 8
   m_Name: Robot
-  m_TagString: RaycastTarget
+  m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

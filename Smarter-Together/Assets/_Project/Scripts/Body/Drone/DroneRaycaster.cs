@@ -1,5 +1,5 @@
 ﻿using Gisha.SmarterTogether.Core;
-using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Gisha.SmarterTogether.Body.Drone
@@ -15,13 +15,14 @@ namespace Gisha.SmarterTogether.Body.Drone
         private void Update()
         {
             var raycastHits = Physics.RaycastAll(transform.position, drone.Camera.transform.forward);
-            var targetRaycastHits = raycastHits.Where(x => x.collider.CompareTag("RaycastTarget")).ToArray();
+            var raycastTargets = new List<IRaycastTarget>();
 
-            if (targetRaycastHits.Length > 0)
-            {
-                var raycastTarget = targetRaycastHits.FirstOrDefault().collider.GetComponent<IRaycastTarget>();
-                raycastTarget.OnRaycast();
-            }
+            foreach (var hit in raycastHits)
+                if (hit.collider.TryGetComponent(out IRaycastTarget raycastTarget))
+                    raycastTargets.Add(raycastTarget);
+
+            if (raycastTargets.Count > 0)
+                raycastTargets[0].OnRaycast();
         }
     }
 }
