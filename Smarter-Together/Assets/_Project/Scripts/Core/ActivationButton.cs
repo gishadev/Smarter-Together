@@ -12,13 +12,16 @@ namespace Gisha.SmarterTogether.Core
         public event Action<bool> Triggered;
 
         bool _isTriggering = false;
-        Transform[] robots;
+        GameObject[] robots;
 
         private void Start()
         {
-            robots = GameObject.FindGameObjectsWithTag("Robot")
-                .Select(x => x.transform)
-                .ToArray();
+            robots = GameObject.FindGameObjectsWithTag("Robot");
+
+            for (int i = 0; i < robots.Length; i++)
+            {
+                Debug.Log(robots[i].name + " - " + i, robots[i].gameObject);
+            }
         }
 
         private void OnEnable()
@@ -39,29 +42,26 @@ namespace Gisha.SmarterTogether.Core
 
         private void Update()
         {
-            foreach (var robot in robots)
+            if ((robots.Any(x => Vector3.SqrMagnitude(x.transform.position - transform.position) < sqrDistForActivation)))
             {
-                if (Vector3.SqrMagnitude(robot.transform.position - transform.position) < sqrDistForActivation)
-                {
-                    if (_isTriggering)
-                        return;
-
-                    OnEnterArea();
-
-                    _isTriggering = true;
+                if (_isTriggering)
                     return;
-                }
 
-                else
-                {
-                    if (!_isTriggering)
-                        return;
+                OnEnterArea();
 
-                    OnExitArea();
-
-                    _isTriggering = false;
-                }
+                _isTriggering = true;
+                return;
             }
+            else
+            {
+                if (!_isTriggering)
+                    return;
+
+                OnExitArea();
+
+                _isTriggering = false;
+            }
+
         }
 
         [ContextMenu("Activate")]
