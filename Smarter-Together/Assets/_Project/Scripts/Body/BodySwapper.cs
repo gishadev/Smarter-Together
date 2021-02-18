@@ -1,6 +1,5 @@
 ﻿using Gisha.SmarterTogether.Body.Drone;
 using Gisha.SmarterTogether.Body.Robot;
-using UnityEngine;
 
 namespace Gisha.SmarterTogether.Body
 {
@@ -11,9 +10,9 @@ namespace Gisha.SmarterTogether.Body
         static DroneController _droneController;
         static RobotController _currentRobot;
 
-        public static void Initialize()
+        public static void Initialize(DroneController drone)
         {
-            _droneController = Object.FindObjectOfType<DroneController>();
+            _droneController = drone;
             UpdateCurrentBody(_droneController);
         }
 

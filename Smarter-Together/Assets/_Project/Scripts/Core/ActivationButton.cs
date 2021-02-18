@@ -17,11 +17,6 @@ namespace Gisha.SmarterTogether.Core
         private void Start()
         {
             robots = GameObject.FindGameObjectsWithTag("Robot");
-
-            for (int i = 0; i < robots.Length; i++)
-            {
-                Debug.Log(robots[i].name + " - " + i, robots[i].gameObject);
-            }
         }
 
         private void OnEnable()

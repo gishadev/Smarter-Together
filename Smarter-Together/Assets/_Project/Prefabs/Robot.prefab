@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1746164021}
   - component: {fileID: 1746164023}
   - component: {fileID: 1746164022}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Robot Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1915774560280296711}
   - component: {fileID: 6193667170943761702}
   - component: {fileID: 6247240352218280788}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 5827924939739070034}
   - component: {fileID: 6447391756282782709}
   - component: {fileID: 5827924938126922011}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Robot
   m_TagString: Robot
   m_Icon: {fileID: 0}
@@ -295,8 +295,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   robotCamera: {fileID: 1746164023}
   mouseSensitivity: 75
-  moveSpeed: 6
+  moveSpeed: 8
   jumpForce: 10
   gravityMult: 3
   airMovementMult: 0.35
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 768
   groundCheckerRadius: 0.4

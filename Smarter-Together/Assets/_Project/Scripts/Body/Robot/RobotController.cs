@@ -10,7 +10,6 @@ namespace Gisha.SmarterTogether.Body.Robot
         [SerializeField] private Camera robotCamera = default;
         [SerializeField] private float mouseSensitivity = default;
 
-
         [Header("Movement")]
         [SerializeField] private float moveSpeed = 7.5f;
         [SerializeField] private float jumpForce = 10f;
@@ -18,6 +17,8 @@ namespace Gisha.SmarterTogether.Body.Robot
         [Range(0f, 1f)]
         [SerializeField] private float airMovementMult = 0.5f;
         [Space]
+        [SerializeField] private LayerMask whatIsGround = default;
+
         [SerializeField] private float groundCheckerRadius = 0.5f;
 
         Vector3 GroundCheckerPoint => transform.position - Vector3.up * (_controller.height / 2f);
@@ -30,7 +31,6 @@ namespace Gisha.SmarterTogether.Body.Robot
         float _hInput, _vInput;
         float _xRot, _yRot;
 
-        int _groundMask;
         CharacterController _controller;
 
         public Camera Camera => robotCamera;
@@ -38,7 +38,6 @@ namespace Gisha.SmarterTogether.Body.Robot
         private void Awake()
         {
             _controller = GetComponent<CharacterController>();
-            _groundMask = 1 << LayerMask.NameToLayer("Ground");
         }
 
         private void Update()
@@ -120,7 +119,7 @@ namespace Gisha.SmarterTogether.Body.Robot
 
         private bool CheckGroundCollider()
         {
-            var colliders = Physics.OverlapSphere(GroundCheckerPoint, groundCheckerRadius, _groundMask);
+            var colliders = Physics.OverlapSphere(GroundCheckerPoint, groundCheckerRadius, whatIsGround);
             return colliders.Count(x => x.gameObject != gameObject) > 0;
         }
 
