@@ -12,11 +12,14 @@ namespace Gisha.SmarterTogether.Core
         public event Action<bool> Triggered;
 
         bool _isTriggering = false;
-        GameObject[] robots;
 
-        private void Start()
+        GameObject[] _robots;
+        Animator _animator;
+
+        private void Awake()
         {
-            robots = GameObject.FindGameObjectsWithTag("Robot");
+            _robots = GameObject.FindGameObjectsWithTag("Robot");
+            _animator = GetComponent<Animator>();
         }
 
         private void OnEnable()
@@ -37,7 +40,7 @@ namespace Gisha.SmarterTogether.Core
 
         private void Update()
         {
-            if ((robots.Any(x => Vector3.SqrMagnitude(x.transform.position - transform.position) < sqrDistForActivation)))
+            if ((_robots.Any(x => Vector3.SqrMagnitude(x.transform.position - transform.position) < sqrDistForActivation)))
             {
                 if (_isTriggering)
                     return;
@@ -64,6 +67,7 @@ namespace Gisha.SmarterTogether.Core
         {
             Debug.Log("<color=green>Button was activated!</color>");
 
+            _animator.SetBool("IsPressed", true);
             Triggered(true);
         }
 
@@ -72,6 +76,7 @@ namespace Gisha.SmarterTogether.Core
         {
             Debug.Log("<color=red>Button was deactivated</color>");
 
+            _animator.SetBool("IsPressed", false);
             Triggered(false);
         }
 

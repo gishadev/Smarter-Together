@@ -205,7 +205,7 @@ MonoBehaviour:
   robotCamera: {fileID: 1746164023}
   mouseSensitivity: 75
   moveSpeed: 8
-  jumpForce: 10
+  jumpForce: 9
   gravityMult: 3
   airMovementMult: 0.35
   whatIsGround:
