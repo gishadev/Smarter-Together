@@ -65,7 +65,7 @@ namespace Gisha.SmarterTogether.Body.Drone
             var mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.fixedDeltaTime;
 
             _xRot -= mouseY;
-            _xRot = Mathf.Clamp(_xRot, -90f, 90f);
+            _xRot = Mathf.Clamp(_xRot, -15f, 90f);
 
             _yRot += mouseX;
             Camera.transform.rotation = Quaternion.Euler(Vector3.right * _xRot + Vector3.up * _yRot);

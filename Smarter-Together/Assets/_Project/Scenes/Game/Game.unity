@@ -308,7 +308,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dronePrefab: {fileID: 638097425733500107, guid: b940367fbb8ad5f4ea315d2ba08c0363, type: 3}
-  levelNumber: 1
 --- !u!1 &1594542046
 GameObject:
   m_ObjectHideFlags: 0
