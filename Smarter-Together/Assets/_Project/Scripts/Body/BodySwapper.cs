@@ -1,5 +1,6 @@
 ﻿using Gisha.SmarterTogether.Body.Drone;
 using Gisha.SmarterTogether.Body.Robot;
+using UnityEngine;
 
 namespace Gisha.SmarterTogether.Body
 {
@@ -25,6 +26,8 @@ namespace Gisha.SmarterTogether.Body
 
             _droneController.Camera.gameObject.SetActive(true);
             _currentRobot.Camera.gameObject.SetActive(false);
+
+            _currentRobot.gameObject.layer = LayerMask.NameToLayer("Robot");
         }
 
         public static void ChangeToRobot(RobotController robot)
@@ -35,6 +38,7 @@ namespace Gisha.SmarterTogether.Body
             // Update State.
             _droneController.Camera.gameObject.SetActive(false);
             robot.Camera.gameObject.SetActive(true);
+            robot.gameObject.layer = LayerMask.NameToLayer("NowRobot");
         }
 
         private static void UpdateCurrentBody(BodyPlaceholder newBody)

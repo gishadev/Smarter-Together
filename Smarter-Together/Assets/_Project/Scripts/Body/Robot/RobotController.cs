@@ -21,7 +21,7 @@ namespace Gisha.SmarterTogether.Body.Robot
 
         [SerializeField] private float groundCheckerRadius = 0.5f;
 
-        Vector3 GroundCheckerPoint => transform.position - Vector3.up * (_controller.height / 2f);
+        Vector3 GroundCheckerPoint => transform.position - Vector3.up * (_controller.height / 2f - _controller.center.y);
 
         float _nowMoveSpeed;
         Vector3 _velocity;
