@@ -18,20 +18,25 @@ namespace Gisha.SmarterTogether.Body.Drone
             var raycastTargets = new List<IRaycastTarget>();
 
             foreach (var hit in raycastHits)
-                if (hit.collider.TryGetComponent(out IRaycastTarget raycastTarget))
+                if (hit.collider.TryGetComponent(out RaycastHUD raycastHUD))
                 {
                     Distance = hit.distance;
-                    TargetName = hit.collider.name;
-                    raycastTargets.Add(raycastTarget);
+                    TargetName = raycastHUD.RaycastName;
+
+                    if (hit.collider.TryGetComponent(out IRaycastTarget raycastTarget))
+                        raycastTargets.Add(raycastTarget);
+
+                    break;
+                }
+
+                else
+                {
+                    Distance = 0f;
+                    TargetName = "NUN";
                 }
 
             if (raycastTargets.Count > 0)
                 raycastTargets[0].OnRaycast();
-            else
-            {
-                Distance = 0f;
-                TargetName = "NUN";
-            }
         }
     }
 }

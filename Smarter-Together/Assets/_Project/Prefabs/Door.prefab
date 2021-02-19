@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2877228279669690765}
   - component: {fileID: 2877228279669690766}
   - component: {fileID: 2877228279669690767}
+  - component: {fileID: 8751162413438256107}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -95,6 +96,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8751162413438256107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2877228279669690769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba1d2f374acc884dbfe83b382c81602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastName: Door
 --- !u!1 &2877228279977582478
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +173,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde9cfa5a4345bc408d61e408f3a2fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelTrans: {fileID: 2877228279669690768}
-  shiftDirection: {x: 0, y: 0, z: 1}
-  shiftDistance: 6.5
-  shiftSpeed: 2
