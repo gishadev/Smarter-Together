@@ -7,12 +7,14 @@ namespace Gisha.SmarterTogether.Body.Drone
     [System.Serializable]
     public class DroneRaycaster
     {
+        [SerializeField] private float raycastRadius = 0.5f;
+
         public float Distance { get; private set; }
         public string TargetName { get; private set; } = "NUN";
 
         public void UpdateRaycast(DroneController controller)
         {
-            var raycastHits = Physics.RaycastAll(controller.transform.position, controller.Camera.transform.forward);
+            var raycastHits = Physics.SphereCastAll(controller.transform.position, raycastRadius, controller.Camera.transform.forward);
             var raycastTargets = new List<IRaycastTarget>();
 
             foreach (var hit in raycastHits)
