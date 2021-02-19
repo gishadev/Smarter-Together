@@ -42,7 +42,7 @@ namespace Gisha.SmarterTogether.Core
         public static void LoadLevel(int levelNumber)
         {
             Fader.Instance.StartFade();
-            Fader.Instance.DarkCaller.FullDark += () => Instance.SyncLevelLoad(levelNumber);
+            Fader.Instance.FullDark += () => Instance.SyncLevelLoad(levelNumber);
         }
 
         private void SyncLevelLoad(int levelNumber)
@@ -50,7 +50,7 @@ namespace Gisha.SmarterTogether.Core
             SceneManager.LoadScene($"Level_{levelNumber}");
             SceneManager.LoadScene("Game", LoadSceneMode.Additive);
 
-            Fader.Instance.DarkCaller.FullDark -= () => Instance.SyncLevelLoad(levelNumber);
+            Fader.Instance.FullDark -= () => Instance.SyncLevelLoad(levelNumber);
             Fader.Instance.ExitFade();
         }
     }

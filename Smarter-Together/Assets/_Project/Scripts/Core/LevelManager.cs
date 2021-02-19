@@ -24,7 +24,7 @@ namespace Gisha.SmarterTogether.Core
         private void Start()
         {
             EnterLevelDoor.Trigger(true);
-            BodySwapper.Initialize(spawnPoint.position);
+            BodySwapper.Initialize(spawnPoint);
         }
     }
 }

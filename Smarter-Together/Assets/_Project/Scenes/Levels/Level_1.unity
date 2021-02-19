@@ -167,14 +167,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enterLevelDoor: {fileID: 419453207}
-  spawnPoint: {fileID: 1224395123437035660}
+  spawnPoint: {fileID: 4377585127472914378}
 --- !u!43 &215073341
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-10422
+  m_Name: pb_Mesh-38002
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4489,11 +4489,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde9cfa5a4345bc408d61e408f3a2fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1224395123437035660 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3187882894834089797, guid: ad7f60950e840e14fb10d0bae8b58b74, type: 3}
-  m_PrefabInstance: {fileID: 4377585127472914377}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2452358964424993985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4558,6 +4553,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 690611986457389083, guid: ad7f60950e840e14fb10d0bae8b58b74, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 690611986457389083, guid: ad7f60950e840e14fb10d0bae8b58b74, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 690611986457389083, guid: ad7f60950e840e14fb10d0bae8b58b74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 3187882894834089797, guid: ad7f60950e840e14fb10d0bae8b58b74, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8
@@ -4616,6 +4623,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad7f60950e840e14fb10d0bae8b58b74, type: 3}
+--- !u!4 &4377585127472914378 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 690611986457389083, guid: ad7f60950e840e14fb10d0bae8b58b74, type: 3}
+  m_PrefabInstance: {fileID: 4377585127472914377}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7856900263659882029
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,12 +12,15 @@ namespace Gisha.SmarterTogether.Body
         static DroneController _droneController;
         static RobotController _currentRobot;
 
-        public static void Initialize(Vector3 droneSpawnpoint)
+        public static void Initialize(Transform spawnPoint)
         {
             _bodyManager = GameObject.FindObjectOfType<BodyManager>();
 
             // Drone initializing.
-            var drone = GameObject.Instantiate(_bodyManager.DronePrefab, droneSpawnpoint, Quaternion.identity).GetComponent<DroneController>();
+            var drone = GameObject.Instantiate(
+                _bodyManager.DronePrefab, spawnPoint.position, spawnPoint.rotation)
+                .GetComponent<DroneController>();
+
             _droneController = drone;
             UpdateCurrentBody(_droneController);
         }

@@ -9,9 +9,7 @@ namespace Gisha.SmarterTogether.UI
         public static Fader Instance { get; private set; }
         #endregion
 
-        [SerializeField] private FullDarkCaller darkCaller;
-
-        public FullDarkCaller DarkCaller => darkCaller;
+        public event Action FullDark;
 
         Animation _animation;
 
@@ -31,6 +29,8 @@ namespace Gisha.SmarterTogether.UI
             if (Instance != null && Instance != this)
                 Destroy(gameObject);
         }
+
+        public void CallFullDark() => FullDark();
 
         public void StartFade()
         {
