@@ -1,4 +1,5 @@
 ﻿using Gisha.SmarterTogether.Body.Drone;
+using Gisha.SmarterTogether.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,8 +10,6 @@ namespace Gisha.SmarterTogether.Core
         #region Singleton
         private static GameManager Instance { get; set; }
         #endregion
-
-        [SerializeField] private GameObject dronePrefab = default;
 
         private void Awake()
         {
@@ -34,16 +33,25 @@ namespace Gisha.SmarterTogether.Core
                 Destroy(gameObject);
         }
 
+        [ContextMenu("Load Level")]
+        private void ManualLoad()
+        {
+            LoadLevel(1);
+        }
+
         public static void LoadLevel(int levelNumber)
+        {
+            Fader.Instance.StartFade();
+            Fader.Instance.DarkCaller.FullDark += () => Instance.SyncLevelLoad(levelNumber);
+        }
+
+        private void SyncLevelLoad(int levelNumber)
         {
             SceneManager.LoadScene($"Level_{levelNumber}");
             SceneManager.LoadScene("Game", LoadSceneMode.Additive);
-        }
 
-        public static DroneController SpawnDrone(Vector3 position)
-        {
-            var droneGO = Instantiate(Instance.dronePrefab, position, Quaternion.identity);
-            return droneGO.GetComponent<DroneController>();
+            Fader.Instance.DarkCaller.FullDark -= () => Instance.SyncLevelLoad(levelNumber);
+            Fader.Instance.ExitFade();
         }
     }
 }
