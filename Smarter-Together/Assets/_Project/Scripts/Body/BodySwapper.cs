@@ -1,5 +1,6 @@
 ﻿using Gisha.SmarterTogether.Body.Drone;
 using Gisha.SmarterTogether.Body.Robot;
+using Gisha.SmarterTogether.UI;
 using UnityEngine;
 
 namespace Gisha.SmarterTogether.Body
@@ -23,6 +24,7 @@ namespace Gisha.SmarterTogether.Body
 
             _droneController = drone;
             UpdateCurrentBody(_droneController);
+            GameObject.FindObjectOfType<DroneHUD>().Drone = drone;
         }
 
         public static void ReturnToDrone()
@@ -31,6 +33,7 @@ namespace Gisha.SmarterTogether.Body
                 return;
 
             UpdateCurrentBody(_droneController);
+            GameObject.FindObjectOfType<HUDManager>().UpdateHUD(HUDType.Drone);
 
             _droneController.Camera.gameObject.SetActive(true);
             _currentRobot.Camera.gameObject.SetActive(false);
@@ -42,6 +45,7 @@ namespace Gisha.SmarterTogether.Body
         {
             _currentRobot = robot;
             UpdateCurrentBody(robot);
+            GameObject.FindObjectOfType<HUDManager>().UpdateHUD(HUDType.Robot);
 
             // Update State.
             _droneController.Camera.gameObject.SetActive(false);

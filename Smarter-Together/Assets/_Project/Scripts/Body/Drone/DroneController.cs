@@ -2,7 +2,6 @@
 
 namespace Gisha.SmarterTogether.Body.Drone
 {
-    [RequireComponent(typeof(DroneRaycaster))]
     public class DroneController : BodyPlaceholder
     {
         [Header("Drone")]
@@ -14,13 +13,14 @@ namespace Gisha.SmarterTogether.Body.Drone
         [SerializeField] private Camera droneCamera = default;
         [SerializeField] private float mouseSensitivity = default;
 
+        public DroneRaycaster DroneRaycaster;
+
         public Camera Camera => droneCamera;
 
         float _xRot, _yRot;
         float _zInput, _xInput, _yInput;
 
         Rigidbody _rb;
-
 
         private void Awake()
         {
@@ -35,13 +35,14 @@ namespace Gisha.SmarterTogether.Body.Drone
                 return;
 
             UpdateMovementInput();
+            DroneRaycaster.UpdateRaycast(this);
         }
 
         private void FixedUpdate()
         {
             if (!IsWorking)
                 return;
-            
+
             RotateCamera();
             MoveBody();
             RotateBody();

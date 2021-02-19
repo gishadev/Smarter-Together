@@ -33,12 +33,6 @@ namespace Gisha.SmarterTogether.Core
                 Destroy(gameObject);
         }
 
-        [ContextMenu("Load Level")]
-        private void ManualLoad()
-        {
-            LoadLevel(1);
-        }
-
         public static void LoadLevel(int levelNumber)
         {
             Fader.Instance.StartFade();
