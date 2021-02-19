@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Gisha.SmarterTogether.Core;
+using UnityEngine;
 
-namespace Gisha.SmarterTogether.Core
+namespace Gisha.SmarterTogether.Environment
 {
     public class NextLevelTrigger : MonoBehaviour
     {

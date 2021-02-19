@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Gisha.SmarterTogether
+namespace Gisha.SmarterTogether.Core
 {
     public class GameManager : MonoBehaviour
     {

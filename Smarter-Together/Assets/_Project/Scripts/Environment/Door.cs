@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Gisha.SmarterTogether
+namespace Gisha.SmarterTogether.Environment
 {
     [RequireComponent(typeof(Animator))]
     public class Door : MonoBehaviour

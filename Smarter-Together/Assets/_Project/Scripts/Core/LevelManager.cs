@@ -1,7 +1,8 @@
 ﻿using Gisha.SmarterTogether.Body;
+using Gisha.SmarterTogether.Environment;
 using UnityEngine;
 
-namespace Gisha.SmarterTogether
+namespace Gisha.SmarterTogether.Core
 {
     public class LevelManager : MonoBehaviour
     {

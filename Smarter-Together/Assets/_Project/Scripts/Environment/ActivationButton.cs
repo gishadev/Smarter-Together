@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace Gisha.SmarterTogether.Core
+namespace Gisha.SmarterTogether.Environment
 {
     public class ActivationButton : MonoBehaviour
     {
@@ -40,7 +40,7 @@ namespace Gisha.SmarterTogether.Core
 
         private void Update()
         {
-            if ((_robots.Any(x => Vector3.SqrMagnitude(x.transform.position - transform.position) < sqrDistForActivation)))
+            if (_robots.Any(x => Vector3.SqrMagnitude(x.transform.position - transform.position) < sqrDistForActivation))
             {
                 if (_isTriggering)
                     return;
