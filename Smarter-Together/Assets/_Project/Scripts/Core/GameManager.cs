@@ -17,7 +17,7 @@ namespace Gisha.SmarterTogether.Core
 
         private void Start()
         {
-            LoadLevel(5);
+            LoadLevel(1);
         }
 
         private void CreateInstance()
