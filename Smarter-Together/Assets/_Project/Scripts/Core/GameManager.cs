@@ -1,5 +1,4 @@
-﻿using Gisha.SmarterTogether.Body.Drone;
-using Gisha.SmarterTogether.UI;
+﻿using Gisha.SmarterTogether.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,7 +17,7 @@ namespace Gisha.SmarterTogether.Core
 
         private void Start()
         {
-            LoadLevel(3);
+            LoadLevel(4);
         }
 
         private void CreateInstance()

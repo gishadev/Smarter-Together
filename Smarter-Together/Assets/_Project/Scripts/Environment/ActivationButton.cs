@@ -25,17 +25,13 @@ namespace Gisha.SmarterTogether.Environment
         private void OnEnable()
         {
             foreach (var door in doors)
-            {
                 Triggered += door.Trigger;
-            }
         }
 
         private void OnDisable()
         {
             foreach (var door in doors)
-            {
                 Triggered -= door.Trigger;
-            }
         }
 
         private void Update()
@@ -68,7 +64,9 @@ namespace Gisha.SmarterTogether.Environment
             Debug.Log("<color=green>Button was activated!</color>");
 
             _animator.SetBool("IsPressed", true);
-            Triggered(true);
+
+            if (doors.Length > 0)
+                Triggered(true);
         }
 
         [ContextMenu("Deactivate")]
@@ -77,7 +75,9 @@ namespace Gisha.SmarterTogether.Environment
             Debug.Log("<color=red>Button was deactivated</color>");
 
             _animator.SetBool("IsPressed", false);
-            Triggered(false);
+
+            if (doors.Length > 0)
+                Triggered(false);
         }
 
         private void OnDrawGizmos()
