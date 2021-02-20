@@ -2844,18 +2844,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.002014
       objectReference: {fileID: 0}
-    - target: {fileID: 7756036335021414743, guid: 6849caa2b87f75f4e863f0339c106734, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7756036335021414743, guid: 6849caa2b87f75f4e863f0339c106734, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7756036335021414743, guid: 6849caa2b87f75f4e863f0339c106734, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6849caa2b87f75f4e863f0339c106734, type: 3}
 --- !u!4 &1168174816 stripped
@@ -3821,9 +3809,69 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1699730972}
     m_Modifications:
+    - target: {fileID: 1279297978592251820, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641776576780492432, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641776576893086932, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641776576923124445, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641776577224126794, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641776577546299981, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641776577565952746, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641776577696358257, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641776577801918625, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641776577993408893, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641776577994486327, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641776578315372448, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641776578425841742, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338424889770476777, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8116540568883999848, guid: 4acea743378996a41abea0a4dd736115, type: 3}
       propertyPath: m_Name
       value: Pipe_Array
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116540568883999848, guid: 4acea743378996a41abea0a4dd736115, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8116540568883999849, guid: 4acea743378996a41abea0a4dd736115, type: 3}
       propertyPath: m_LocalPosition.x
