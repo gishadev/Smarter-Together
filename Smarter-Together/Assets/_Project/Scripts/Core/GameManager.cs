@@ -15,9 +15,10 @@ namespace Gisha.SmarterTogether.Core
             CreateInstance();
         }
 
-        private void Start()
+        private void Update()
         {
-            LoadLevel(1);
+            if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 0)
+                LoadMenu();
         }
 
         private void CreateInstance()
@@ -32,19 +33,37 @@ namespace Gisha.SmarterTogether.Core
                 Destroy(gameObject);
         }
 
+        #region Level Loading
         public static void LoadLevel(int levelNumber)
         {
             Fader.Instance.StartFade();
-            Fader.Instance.FullDark += () => Instance.SyncLevelLoad(levelNumber);
+            Fader.Instance.FullDark += () => Instance.OnDarkLevelLoad(levelNumber);
         }
 
-        private void SyncLevelLoad(int levelNumber)
+        private void OnDarkLevelLoad(int levelNumber)
         {
             SceneManager.LoadScene($"Level_{levelNumber}");
             SceneManager.LoadScene("Game", LoadSceneMode.Additive);
 
-            Fader.Instance.FullDark -= () => Instance.SyncLevelLoad(levelNumber);
+            Fader.Instance.FullDark -= () => Instance.OnDarkLevelLoad(levelNumber);
             Fader.Instance.ExitFade();
         }
+        #endregion
+
+        #region Menu Loading
+        public static void LoadMenu()
+        {
+            Fader.Instance.StartFade();
+            Fader.Instance.FullDark += () => Instance.OnDarkMenuLoad();
+        }
+
+        private void OnDarkMenuLoad()
+        {
+            SceneManager.LoadScene("MainMenu");
+
+            Fader.Instance.FullDark -= () => Instance.OnDarkMenuLoad();
+            Fader.Instance.ExitFade();
+        }
+        #endregion
     }
 }

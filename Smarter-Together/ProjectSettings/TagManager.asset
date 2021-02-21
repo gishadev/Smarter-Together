@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Robot
   - Drone
+  - Screenshot
   layers:
   - Default
   - TransparentFX
