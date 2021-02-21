@@ -13,7 +13,7 @@ namespace Gisha.SmarterTogether.Body
         {
             if (BodySwapper.CurrentBody != null && BodySwapper.CurrentBody.GetType().Equals(typeof(RobotController)))
             {
-                if (Input.GetKeyDown(KeyCode.R))
+                if (Input.GetKeyDown(KeyCode.Q))
                     BodySwapper.ReturnToDrone();
             }
         }
