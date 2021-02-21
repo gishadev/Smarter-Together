@@ -123,6 +123,658 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &70440174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 70440175}
+  - component: {fileID: 70440176}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &70440175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70440174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &70440176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70440174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf4889b9d97c794d84d0d3cfaf98388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicCollection: []
+  sfxCollection:
+  - name: back_001
+    audioClip: {fileID: 8300000, guid: 7f07c3b465e78474ca718c038abf929c, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: back_002
+    audioClip: {fileID: 8300000, guid: b4f299493d81e4244b264d1ab9631702, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: back_003
+    audioClip: {fileID: 8300000, guid: 13ec72098102e4848871a502baa9e9db, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: back_004
+    audioClip: {fileID: 8300000, guid: dd1afdc5d2e26f648bad5b2c31563d46, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: bong_001
+    audioClip: {fileID: 8300000, guid: 91e90b24dd371e8419b52078edaad1cc, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: click_001
+    audioClip: {fileID: 8300000, guid: d12dbb19aff6e884382b99c37a0f37c2, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: click_002
+    audioClip: {fileID: 8300000, guid: 878e6737ec96a5948b5077e61c4dbdec, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: click_003
+    audioClip: {fileID: 8300000, guid: 845daabe2320293469dd8b3c5d938e74, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: click_004
+    audioClip: {fileID: 8300000, guid: eb640a0174e7bb044be33cea3d666361, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: click_005
+    audioClip: {fileID: 8300000, guid: ab39f90fe1120104da8301afc7e1f484, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: close_001
+    audioClip: {fileID: 8300000, guid: 55cf7e487ce0af94fbdf0e4684124d8f, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: close_002
+    audioClip: {fileID: 8300000, guid: f76aed5080e2fcf4face7e67bb79c58f, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: close_003
+    audioClip: {fileID: 8300000, guid: c5e9458d62473a84fb5ca33bcc6dca23, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: close_004
+    audioClip: {fileID: 8300000, guid: 5fa597b7b953eac42b9b381d8a00fcc1, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: confirmation_001
+    audioClip: {fileID: 8300000, guid: 6bc35b0ab18206e42b4abcbf4e4c65c2, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: confirmation_002
+    audioClip: {fileID: 8300000, guid: e48b8b273979e5b429f66a55161eb44f, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: confirmation_003
+    audioClip: {fileID: 8300000, guid: 685889e490823074081e8569ee7e60df, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: confirmation_004
+    audioClip: {fileID: 8300000, guid: ee365847c29cd50458585a9601187fb0, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: drop_001
+    audioClip: {fileID: 8300000, guid: a43d13285ad0d5d488d47a709f0abb9f, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: drop_002
+    audioClip: {fileID: 8300000, guid: b5cddf8267d799c48ac75e4df72724c5, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: drop_003
+    audioClip: {fileID: 8300000, guid: 8b72a5e045d5f8b44a82f6939d703ab7, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: drop_004
+    audioClip: {fileID: 8300000, guid: c35f562649dc8e74f871ab185070cf7a, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_001
+    audioClip: {fileID: 8300000, guid: 82d6f6fb7f90fb24293543a1cb79b75f, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_002
+    audioClip: {fileID: 8300000, guid: 9564596cb7e5ed3489e81de1c7951eed, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_003
+    audioClip: {fileID: 8300000, guid: 00350786c83d1804fbb95a517fda83fc, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_004
+    audioClip: {fileID: 8300000, guid: 669c2b2ee46852941a4d83ff34c83ff1, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_005
+    audioClip: {fileID: 8300000, guid: 51253fb6456675e44af6ce277a094088, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_006
+    audioClip: {fileID: 8300000, guid: 91b5ad4577466ab4180f3f83ca0ab17e, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_007
+    audioClip: {fileID: 8300000, guid: a75eabdf286c3604b947330b2558603f, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_008
+    audioClip: {fileID: 8300000, guid: a4754b9ce50d5384b8587eac27ddc451, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glass_001
+    audioClip: {fileID: 8300000, guid: 031159cf0f9d6c341bb916f26e6d98f1, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glass_002
+    audioClip: {fileID: 8300000, guid: 36143ab08ef7b8547a0ac025f15471ef, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glass_003
+    audioClip: {fileID: 8300000, guid: 292ecf8dcb7639542861ae5e99b1c994, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glass_004
+    audioClip: {fileID: 8300000, guid: 74d8b47e5bf55304f8dd2fd903df5e69, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glass_005
+    audioClip: {fileID: 8300000, guid: 7929e27373034bf40975e4a494eca418, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glass_006
+    audioClip: {fileID: 8300000, guid: 0f01279f20e78b44ea64d149b8a61904, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glitch_001
+    audioClip: {fileID: 8300000, guid: dfc39b28e89c8304d98a6a970b0d1788, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glitch_002
+    audioClip: {fileID: 8300000, guid: 6ceb4471a33a40b4d92939e9328fbc61, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glitch_003
+    audioClip: {fileID: 8300000, guid: 19f02fe240683024da4da5106a3e2cb6, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glitch_004
+    audioClip: {fileID: 8300000, guid: b71633c1a17b923439376b11c988f39f, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_001
+    audioClip: {fileID: 8300000, guid: 9254cc456a4ec0d409fb7abd1104e5ba, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_002
+    audioClip: {fileID: 8300000, guid: 88b8cb79b04462648a7efa575ebce1b7, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_003
+    audioClip: {fileID: 8300000, guid: 87424bbff2695684ea795b3d5e8f7630, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_004
+    audioClip: {fileID: 8300000, guid: 9c7b35f73629dbe40864e9bb0fec7d1c, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_005
+    audioClip: {fileID: 8300000, guid: dede22ee3646a9e40a0c2001af171a9e, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_006
+    audioClip: {fileID: 8300000, guid: 12665bbb6d04cc841906902e0d6c2625, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_007
+    audioClip: {fileID: 8300000, guid: 2c8eb967d570448479c99f283e6a1174, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_008
+    audioClip: {fileID: 8300000, guid: 7e137b057890a2e469337ecc50059b14, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_009
+    audioClip: {fileID: 8300000, guid: 4b4c4ca839089ad45babd88b951cfc41, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_001
+    audioClip: {fileID: 8300000, guid: a1be6fcae21e17f48888788d06ffe40e, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_002
+    audioClip: {fileID: 8300000, guid: 823d795854c980b47949354f2fb9a5ba, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_003
+    audioClip: {fileID: 8300000, guid: 468ff222d3c326c4a81cf5c145618c34, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_004
+    audioClip: {fileID: 8300000, guid: 7ff1596e29100df4b8281fae8ac37b96, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_005
+    audioClip: {fileID: 8300000, guid: 5aab74319663f474bac5fc70ec3884af, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_006
+    audioClip: {fileID: 8300000, guid: 75c975f25dcee834ea64176c59cc5023, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_007
+    audioClip: {fileID: 8300000, guid: 01fff8319fc295c48835eb7d6c87abed, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_008
+    audioClip: {fileID: 8300000, guid: 7490e7ad8766d7649a55bdfe39fb5f90, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_009
+    audioClip: {fileID: 8300000, guid: 9a3f5d606ab4d1d4dbf839eecd8e35b0, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: open_001
+    audioClip: {fileID: 8300000, guid: 43d5d6c1ec7425e4a8accfefe96e7da0, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: open_002
+    audioClip: {fileID: 8300000, guid: f9c203a135b5acd4e8e9d6d27b1c55c5, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: open_003
+    audioClip: {fileID: 8300000, guid: 5ee031dc94cad8743a843dca7d897b78, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: open_004
+    audioClip: {fileID: 8300000, guid: 2adc9df9081ed674d8d836b642603a2f, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: pluck_001
+    audioClip: {fileID: 8300000, guid: a86d8d7ab51e46540adb20a474d67caa, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: pluck_002
+    audioClip: {fileID: 8300000, guid: ca179acb2629a5e40838ba47c601f421, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: question_001
+    audioClip: {fileID: 8300000, guid: dd7c34860f0314d4585bf733132991fb, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: question_002
+    audioClip: {fileID: 8300000, guid: 1bf27c46e315c594cb664c7cde1c7a92, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: question_003
+    audioClip: {fileID: 8300000, guid: 34646d1abe4149d4593d703c0cdda83b, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: question_004
+    audioClip: {fileID: 8300000, guid: ffb8ae0de5515c24b84c37492b16922c, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scratch_001
+    audioClip: {fileID: 8300000, guid: a12e5e03ce473694d8f1d5388ca4ed21, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scratch_002
+    audioClip: {fileID: 8300000, guid: cd35175a51d28e449bbb9ee9285a1586, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scratch_003
+    audioClip: {fileID: 8300000, guid: 601a02a7fbfcd364fac8597932e7ea75, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scratch_004
+    audioClip: {fileID: 8300000, guid: f3bdd1db50f11d44b85201726a094177, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scratch_005
+    audioClip: {fileID: 8300000, guid: 4c002768c20234f4ea5e77b704508d56, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scroll_001
+    audioClip: {fileID: 8300000, guid: 64c5c2c875c185240b765ce2bcf8e567, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scroll_002
+    audioClip: {fileID: 8300000, guid: f7c1639e53a6fa64db8b8aa2dd1bf30b, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scroll_003
+    audioClip: {fileID: 8300000, guid: 254ef141ddd8456439c0dc621f3135e7, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scroll_004
+    audioClip: {fileID: 8300000, guid: f23b3a96fb21c5e4fbe330f9b6df8473, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scroll_005
+    audioClip: {fileID: 8300000, guid: 2a731792f5464f44da457bb9618eecd5, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_001
+    audioClip: {fileID: 8300000, guid: 545438c0c15b8ea48bab1bdeb439222e, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_002
+    audioClip: {fileID: 8300000, guid: f271f1fb5be833f469d2f4c011969849, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_003
+    audioClip: {fileID: 8300000, guid: bfe3df83dfaf30041b90ff0fba2ab3f3, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_004
+    audioClip: {fileID: 8300000, guid: 6a5f358321d1d2f4087aed27e083e691, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_005
+    audioClip: {fileID: 8300000, guid: d9232d383c80ce34391fc9028b0db94d, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_006
+    audioClip: {fileID: 8300000, guid: 3bac53c419cee304f9404b773209773b, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_007
+    audioClip: {fileID: 8300000, guid: d75582cdccb93914fb6791b8db7871e8, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_008
+    audioClip: {fileID: 8300000, guid: 5a108a524856c08479cf59d35f577a28, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_001
+    audioClip: {fileID: 8300000, guid: 484ccd2576999294f9f657b06b0bb58a, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_002
+    audioClip: {fileID: 8300000, guid: 47ae7e50336d8674db6bb4a0efced041, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_003
+    audioClip: {fileID: 8300000, guid: 782ff564fe6511348aa22a57b571fe8a, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_004
+    audioClip: {fileID: 8300000, guid: e6a73f00e208a4e40aef8013970009f0, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_005
+    audioClip: {fileID: 8300000, guid: 230cc6b88ee5312448eab50683e2ac3d, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_006
+    audioClip: {fileID: 8300000, guid: d6d7f1fcf56de86448da52a35a51cd75, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_007
+    audioClip: {fileID: 8300000, guid: 8d936d5428fcf64429f47c7d445e1a4b, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: tick_001
+    audioClip: {fileID: 8300000, guid: a9fc986cfbf3fec498e7e3374b183606, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: tick_002
+    audioClip: {fileID: 8300000, guid: 5de1d07eb53aadc4ebae10ad0cc1c66e, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: tick_004
+    audioClip: {fileID: 8300000, guid: 005fe2c92b7cded4298742e3f04aa378, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: toggle_001
+    audioClip: {fileID: 8300000, guid: afd4c3b235f03fb4db7144edde4659e6, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: toggle_002
+    audioClip: {fileID: 8300000, guid: 30e60e642775d554584077f9eb889078, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: toggle_003
+    audioClip: {fileID: 8300000, guid: 45f002d29b5a60a4c8f38ab8b6760f72, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: toggle_004
+    audioClip: {fileID: 8300000, guid: 7725e5854877489489acca44f51d1b70, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: Door_Opening
+    audioClip: {fileID: 8300000, guid: 5a30d2b5baf54c2498116420d0d45d92, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  fadeTransitionSpeed: 0
 --- !u!1001 &161370867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -411,6 +1063,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 70440176}
+        m_TargetAssemblyTypeName: Gisha.Effects.Audio.AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: drop_001
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &476241278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,6 +1206,18 @@ MonoBehaviour:
           m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 70440176}
+        m_TargetAssemblyTypeName: Gisha.Effects.Audio.AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: drop_001
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &481040528
@@ -1241,6 +1917,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 70440176}
+        m_TargetAssemblyTypeName: Gisha.Effects.Audio.AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: drop_001
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1187744794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1611,7 +2299,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1658177642
 GameObject:
@@ -1783,7 +2471,7 @@ RectTransform:
   - {fileID: 500801897}
   - {fileID: 585476343}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1883,6 +2571,18 @@ MonoBehaviour:
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 70440176}
+        m_TargetAssemblyTypeName: Gisha.Effects.Audio.AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: drop_001
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1698665756
@@ -2352,6 +3052,18 @@ MonoBehaviour:
           m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 70440176}
+        m_TargetAssemblyTypeName: Gisha.Effects.Audio.AudioManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: drop_001
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1939939241

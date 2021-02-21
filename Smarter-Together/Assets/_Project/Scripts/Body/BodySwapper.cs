@@ -1,4 +1,5 @@
-﻿using Gisha.SmarterTogether.Body.Drone;
+﻿using Gisha.Effects.Audio;
+using Gisha.SmarterTogether.Body.Drone;
 using Gisha.SmarterTogether.Body.Robot;
 using Gisha.SmarterTogether.UI;
 using UnityEngine;
@@ -60,6 +61,8 @@ namespace Gisha.SmarterTogether.Body
 
             newBody.IsWorking = true;
             CurrentBody = newBody;
+
+            AudioManager.Instance.PlaySFX("error_004");
         }
     }
 }

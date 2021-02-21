@@ -1,4 +1,5 @@
-﻿using Gisha.SmarterTogether.Core;
+﻿using Gisha.Effects.Audio;
+using Gisha.SmarterTogether.Core;
 using System.Linq;
 using UnityEngine;
 
@@ -77,6 +78,8 @@ namespace Gisha.SmarterTogether.Body.Robot
             _isInAir = true;
             _velocity = CalculateJumpVelocity(_moveDir * _nowMoveSpeed);
             _controller.slopeLimit = 90f;
+
+            AudioManager.Instance.PlaySFX("drop_004");
         }
 
         private void Gravity()

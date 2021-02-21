@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Gisha.Effects.Audio;
+using UnityEngine;
 
 namespace Gisha.SmarterTogether.Environment
 {
@@ -23,6 +24,7 @@ namespace Gisha.SmarterTogether.Environment
         private void Open()
         {
             animator.SetBool("IsOpened", true);
+            AudioManager.Instance.PlaySFX("Door_Opening");
         }
 
         private void Close()

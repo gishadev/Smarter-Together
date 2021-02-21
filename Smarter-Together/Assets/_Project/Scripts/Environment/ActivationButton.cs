@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gisha.Effects.Audio;
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -67,6 +68,8 @@ namespace Gisha.SmarterTogether.Environment
 
             if (doors.Length > 0)
                 Triggered(true);
+
+            AudioManager.Instance.PlaySFX("click_005");
         }
 
         [ContextMenu("Deactivate")]
@@ -78,6 +81,8 @@ namespace Gisha.SmarterTogether.Environment
 
             if (doors.Length > 0)
                 Triggered(false);
+
+            AudioManager.Instance.PlaySFX("click_005");
         }
 
         private void OnDrawGizmos()

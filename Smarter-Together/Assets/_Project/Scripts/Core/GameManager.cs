@@ -17,8 +17,13 @@ namespace Gisha.SmarterTogether.Core
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 0)
-                LoadMenu();
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (SceneManager.GetActiveScene().buildIndex != 0)
+                    LoadMenu();
+                else
+                    Application.Quit();
+            }
         }
 
         private void CreateInstance()

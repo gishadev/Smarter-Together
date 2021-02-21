@@ -1,4 +1,5 @@
-﻿using Gisha.SmarterTogether.Core;
+﻿using Gisha.Effects.Audio;
+using Gisha.SmarterTogether.Core;
 using UnityEngine;
 
 namespace Gisha.SmarterTogether.Environment
@@ -10,7 +11,10 @@ namespace Gisha.SmarterTogether.Environment
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Drone"))
+            {
                 GameManager.LoadLevel(nextLevel);
+                AudioManager.Instance.PlaySFX("confirmation_002");
+            }
         }
     }
 }
